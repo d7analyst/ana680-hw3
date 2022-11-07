@@ -16,7 +16,7 @@ def predict():
     MS = request.form['math_score']
     RS = request.form['reading_score']
     WS = request.form['writing_score']
-    pred = model.predict(np.array([[68, 53, 86]]))
+    pred = model.predict(np.array([[MS, RS, WS]]))
     #print(pred)
     return render_template('index.html', predict=str(pred))
 if __name__ == '__main__':
