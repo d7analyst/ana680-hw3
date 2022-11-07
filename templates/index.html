@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict Race ClassGroup</title>
+</head>
+<body>
+<h2>Predict Race Classification</h2>
+    <form action="{{ url_for('predict')}}" method="POST">
+        <label for="MS">math score: </label><br>
+        <input type="number" id = "MS" name="math_score" value="40"><br><br>
+        <label for="RS">reading score:</label><br>
+        <input type="number" id = "RS" name="reading_score" value="50"><br><br>
+        <label for="WS"> writing score:</label><br>
+        <input type="number" id="WS" name="writing_score" value="60"><br><br>
+      
+        <input type=submit    value=Submit><br><br>
+   </form>
+    <h4> Predicted Class: {{ predict }} </h4>
+
+
+</body>
+</html>
