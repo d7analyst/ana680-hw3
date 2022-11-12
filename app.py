@@ -5,8 +5,7 @@ import joblib
 app = Flask(__name__)
 filename = 'file_HW3_mdl3.pkl'
 model = pickle.load(open(filename, 'rb'))
-model = joblib.load(filename)  # two ways to load the model, not using joblib here
-#model = joblib.load('filename.pkl')
+model = joblib.load(filename) 
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -23,7 +22,7 @@ def predict():
     PH = request.form['PH']
     SP = request.form['Sulphates']
     AL = request.form['Alcohol']
-    pred = model.predict(np.array([[FA, VA, CA, RS, CL, FS, DS, PH , SP, AL]))
+    pred = model.predict(np.array([[FA, VA, CA, RS, CL, FS, DS, PH , SP, AL]]))
     #print(pred)
     return render_template('index.html', predict=str(pred))
 if __name__ == '__main__':
