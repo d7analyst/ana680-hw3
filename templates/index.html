@@ -2,22 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Predict Race ClassGroup</title>
+    <title>Predict Wine Quality</title>
 </head>
 <body>
-<h2>Predict Race Classification</h2>
+<h2>Predict Wine Quality</h2>
     <form action="{{ url_for('predict')}}" method="POST">
-        <label for="MS">math score: </label><br>
-        <input type="number" id = "MS" name="math_score" value="40"><br><br>
-        <label for="RS">reading score:</label><br>
-        <input type="number" id = "RS" name="reading_score" value="50"><br><br>
-        <label for="WS"> writing score:</label><br>
-        <input type="number" id="WS" name="writing_score" value="60"><br><br>
-      
-        <input type=submit    value=Submit><br><br>
-   </form>
-    <h4> Predicted Race Class: {{ predict }} </h4>
 
+        <label for="FA">Fixed_Acidity: </label><br>
+        <input type="number" id = "FA" name="Fixed_Acidity" value="7.9"><br><br>
+
+        <label for="VA">Volatile_Acidity:</label><br>
+        <input type="number" id = "VA" name="Volatile_Acidity" value="0.32"><br><br>
+
+        <label for="CA"> Citric_Acid:</label><br>
+        <input type="number" id="CA" name="Citric_Acid" value="0.51"><br><br>
+
+        <label for="RS">Residual_Sugar: </label><br>
+        <input type="number" id = "RS" name="Residual_Sugar" value="1.8"><br><br>
+
+        <label for="CL">Chlorides:</label><br>
+        <input type="number" id = "CL" name="Chlorides" value="0.341"><br><br>
+
+        <label for="FS"> Free_Sulpher_Dioxide:</label><br>
+        <input type="number" id="DS" name="Density" value="17"><br><br>
+
+        <label for="DS">Density: </label><br>
+        <input type="number" id = "FA" name="Fixed_Acidity" value="0.9969"><br><br>
+
+        <label for="PH">PH:</label><br>
+        <input type="number" id = "PH" name="PH" value="3.04"><br><br>
+
+        <label for="SP"> Sulphates:</label><br>
+        <input type="number" id="SP" name="Sulphates" value="1.08"><br><br>
+
+        <label for="AL"> Alcohol:</label><br>
+        <input type="number" id="AL" name="Alcohol" value="9.2"><br><br> 
+    
+        <input type=submit    value=Submit><br><br>
+
+   </form>
+    <h4> Predicted Wine Quality: {{ predict }} </h4> <br>
+    <h4> Quality is from 1 to 10 with 10 being best</h4>
 
 </body>
 </html>
