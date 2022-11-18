@@ -21,12 +21,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install flake8 
           pip install -r requirements.txt
-      - name: run_program
-        run: python app.py
+
       - name: deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "ana680-student-classification" #Must be unique in Heroku
+          heroku_app_name: "ana680-hw3" #Must be unique in Heroku
           heroku_email: "d.fairbairn323@student.nu.edu"
      
