@@ -1,10 +1,9 @@
-from flask import Flask
 import numpy as np
 import pickle
 import joblib
+from flask import Flask, render_template, request
 app = Flask(__name__)
 filename = 'file_HW3_mdl3.pkl'
-model = pickle.load(open(filename, 'rb'))
 model = joblib.load(filename) 
 @app.route('/')
 def index():
